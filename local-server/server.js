@@ -1,6 +1,8 @@
 let express = require("express");
+let cors = require('cors')
 let app = express();
 
+app.use(cors())
 app.use(function (req, res, next) {
   console.log(`${new Date()} - ${req.method} request for ${req.url}`);
   next();
