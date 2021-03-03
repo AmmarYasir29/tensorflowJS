@@ -1,0 +1,23 @@
+const img_class = [
+  "abraham_grampa_simpson",
+  "apu_nahasapeemapetilon",
+  "bart_simpson",
+  "charles_montgomery_burns",
+  "chief_wiggum",
+  "comic_book_guy",
+  "edna_krabappel",
+  "homer_simpson",
+  "kent_brockman",
+  "krusty_the_clown",
+  "lenny_leonard",
+  "lisa_simpson",
+  "marge_simpson",
+  "mayor_quimby",
+  "milhouse_van_houten",
+  "moe_szyslak",
+  "ned_flanders",
+  "nelson_muntz",
+  "principal_skinner",
+  "sideshow_bob",
+];
+export default img_class;

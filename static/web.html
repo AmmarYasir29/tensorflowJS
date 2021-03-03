@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Page</title>
+  </head>
+  <body>
+    <h1>The Simpsons image classifier</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est aperiam</p>
+
+    <input
+      type="file"
+      name="img"
+      accept=".png, .jpg, .jpeg"
+      id="img"
+      onchange="handleChange(event)"
+    />
+    <button onclick="SavePhoto(event)">Predict</button>
+
+    <img src="" style="width: 224px; height: 224px" alt="img" id="userImg" />
+
+    <h3 id="result"></h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="predict.js"></script>
+  </body>
+</html>
