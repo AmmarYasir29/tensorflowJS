@@ -1,20 +1,31 @@
-const handleChange = (e) => {
+// let model;
+const handleChange = async (e) => {
   e = e || window.event;
   if (e.target.files.length) {
     document.getElementById("userImg").src = URL.createObjectURL(
       e.target.files[0]
     );
-  } else console.log("upload img");
+  }
 };
-let model;
 
 (async function () {
-  model = await tf.loadModel("http://localhost:3000/simple/model.json");
-});
+  console.log("wating form model load!");
+  // model = await tf.loadModel("http://localhost:3000/simple/model.json");
+  const model = await tf.loadLayersModel(
+    "http://localhost:3000/simple/model.json"
+  );
+  console.log("model: ", model);
+})();
 
 async function SavePhoto(e) {
   e = e || window.event;
   let image = document.getElementById("userImg");
+
+  const example = tf.fromPixels(image);
+
+  const prediction = model.predict(example);
+
+  console.log(prediction);
   // let tensor = tf
   //   .fromPixels(image)
   //   .resizeNearestneighbor([224, 224])
